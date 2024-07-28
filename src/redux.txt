@@ -1,0 +1,42 @@
+library for JS apps
+A predictable state container
+e.g., Registration Form
+Not only for React
+Use for passing the states to offer components
+
+Lifting Stateup or props drilling is tricky and Redcux makes it easy
+React and Redux both are independent
+
+
+// CORE CONCEPTS
+1 => STORE : Holds state of you application
+2 => ACTION : Describes the changes in the state of your application. How the state of your application wil changes
+3 => REDUCER :ACtually carries out the state transition depending on the action. means a function which accepts action/ instruction
+ like we have to add it in 2. and reducer fulfills this order
+
+
+
+ Shop <-------------> Shopkeeper <---------------------> Customer
+ (Customer)         (reducer)                               (Action)
+
+Store (Shop) :  All states of our JS application are in stores
+ACtion (Customer) : you are going to store, you order like you are giving an action/order to Shopkeeper/Store that you wanna buy a book
+Reducer (Shopkeeper) : accepts order from you,remove book from store and give it to Customer. acceps action and
+                        update the state of the store
+
+
+
+Rules :
+1 : the state of your application is store in object tree within a single store
+Stores contain only single object and that object can contain many states
+{
+    numberofbook:10;
+}
+2 :  only way to change the state is possible only when we have an action(object), with property type and type
+    tells us which action to perform. With the help of action we can update our state
+3: Reducer is a function like it fulfills that action which is to be ask to done
+
+Overview:
+
+JS application => All state => keep it in redux store =>to change state => not directly change =>
+have to give some actions to change the state => accepts by reducer => reducer go to store and change the states there
